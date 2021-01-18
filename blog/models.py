@@ -68,6 +68,3 @@ class Comment(models.Model):
 
     def get_absolute_url(self):
         return self.post.get_absolute_url() + '#comment-id-{}'.format(self.pk)
-
-class Foo(models.Model):
-    foo = models.CharField(max_length=10)
