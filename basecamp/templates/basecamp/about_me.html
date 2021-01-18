@@ -1,0 +1,27 @@
+{% extends 'basecamp/base_full.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <h1 class="my-3">About Me</h1>
+            <h3 class="my-3">Hello, world!</h3>
+
+            <h5 class="my-2">Working on EOS Project</h5>
+            <p></p>
+        </div>
+        <div class="col-md">
+            <img class="img-fluid" src="{% static 'basecamp/images/olaf.jpg' %}"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <img class="img-fluid" src="{% static 'basecamp/images/olaf.jpg' %}"/>
+        </div>
+        <div class="col-md">
+            <h1 class="my-3">Contact Me</h1>
+            <h3>Email: <small>youseokwon1667@gmail.com</small></h3>
+        </div>
+    </div>
+</div>
+{% endblock %}
