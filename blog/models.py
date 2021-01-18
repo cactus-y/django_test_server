@@ -18,15 +18,15 @@ class Category(models.Model):
     class Meta:
         verbose_name_plural = 'categories'
 
-# class Tag(models.Model):
-#     name = models.CharField(max_length=40, unique=True)
-#     slug = models.SlugField(unique=True, allow_unicode=True)
-#
-#     def get_absolute_url(self):
-#         return '/blog/tag/{}/'.format(self.slug)
-#
-#     def __str__(self):
-#         return self.name
+class Tag(models.Model):
+    name = models.CharField(max_length=40, unique=True)
+    slug = models.SlugField(unique=True, allow_unicode=True)
+
+    def get_absolute_url(self):
+        return '/blog/tag/{}/'.format(self.slug)
+
+    def __str__(self):
+        return self.name
 
 class Post(models.Model):
     title = models.CharField(max_length=30)
@@ -68,3 +68,6 @@ class Comment(models.Model):
 
     def get_absolute_url(self):
         return self.post.get_absolute_url() + '#comment-id-{}'.format(self.pk)
+
+class Foo(models.Model):
+    foo = models.CharField(max_length=10)
